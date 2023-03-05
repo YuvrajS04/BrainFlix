@@ -1,7 +1,7 @@
 
 import Comment from "../Comment/Comment";
 
-function CommentList(selectedVideo) {
+function CommentList({selectedVideo}) {
   return (
     <section className="comments-section">
       <form className="form">

@@ -2,7 +2,6 @@ function VideoDetails(props) {
   console.log(props);
   return (
     <section>
-        <video src={props.selectedVideo.video} className="video"></video>
       <h1 className="video__title">{props.selectedVideo.title}</h1>
       <div className="video__analytics">
         <div className="video__info">

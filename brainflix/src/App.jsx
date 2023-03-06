@@ -29,7 +29,6 @@ function App() {
     <VideoDetails selectedVideo={selectedVideo} />
     <Comments selectedVideo={selectedVideo} />
     <VideosList videosList={VideoList} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
-    <NextVideo videosList={VideoList}/>
     </div>
   );
 }

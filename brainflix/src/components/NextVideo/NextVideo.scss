@@ -1,2 +1,11 @@
 @import "../../styles/partials/variables";
 
+.next-video__wrapper-left{
+    width: 4rem;
+    height: 2rem;
+    background-size: cover;
+}
+.next-video__wrapper{
+    display: flex;
+    flex-direction: row;
+}

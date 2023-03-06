@@ -1,4 +1,8 @@
+@import "../../styles/partials/variables";
 
 .next-videos__title{
     font-weight: 400;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    color: $primaryLight;
 }

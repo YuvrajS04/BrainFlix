@@ -5,50 +5,55 @@
 
 * {
   font-family: "avenir";
+  box-sizing: border-box;
+  margin: 0;
 }
-
-.header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-
-  &-avatar {
-    background: url("./assets/Images/Mohan-muruge.jpg");
-    border-radius: 50%;
-    background-position: center;
-    background-size: cover;
-    height: 2.25rem;
-    width: 2.25rem;
-    flex: 0;
-    order: 2;
-    margin-left: 1rem;
-    }
-
-    &-input {
-      flex: 1;
-      width: 100%;
-      order: 1;
-    }
-
-  &-button {
-    width: 100%;
-    order: 3;
-  }
+a, a:visited {
+  text-decoration: none;
+  color: $primaryLighter;
 }
+li {
+  list-style-type: none;
 }
-img {
-  height: 100px;
-  width: 100px;
-}
-video {
-  height: 100px;
-  width: 100px;
-}
+// .header {
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+//   align-content: center;
+
+//   &__container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+
+
+//   &-avatar {
+//     background: url("./assets/Images/Mohan-muruge.jpg");
+//     border-radius: 50%;
+//     background-position: center;
+//     background-size: cover;
+//     height: 2.25rem;
+//     width: 2.25rem;
+//     flex: 0;
+//     order: 2;
+//     margin-left: 1rem;
+//     }
+
+//     &-input {
+//       flex: 1;
+//       width: 100%;
+//       order: 1;
+//     }
+
+//   &-button {
+//     width: 100%;
+//     order: 3;
+//   }
+// }
+// }
+// img {
+//   height: 100px;
+//   width: 100px;
+// }
+
 

@@ -1,0 +1,55 @@
+@import "../../styles/partials/variables";
+
+.video{
+    &__title{
+        font-weight: 500;
+        margin: 1rem 1rem;
+    }
+    &__analytics{
+        margin: 0rem 1rem;
+        border-top: 0.063rem solid $secondaryLight;
+        border-bottom: 0.063rem solid $secondaryLight;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0rem;
+    }
+    &__name{
+        font-size: 1rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    &__date{
+        font-size: 0.8rem;
+        color: $primaryLight;
+    }
+    &__stats{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5rem;
+    }
+    &__views{
+        margin-bottom: 1rem;
+
+        &-icon{
+            margin-right: 0.5rem;
+        }
+    }
+    &__likes {
+        &-icon{
+            margin-right: 0.5rem; 
+        }
+    }
+    &__views, &__likes {
+        display: flex;
+        flex-direction: row;
+        color: $primaryLight;
+        font-size: 0.8rem;
+    }
+    &__text{
+        font-size: 0.813rem;
+        margin: 1rem 1rem;
+        color: $primary;
+        line-height: 1.125rem;
+    }
+}

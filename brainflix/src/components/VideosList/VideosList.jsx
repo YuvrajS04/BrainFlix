@@ -1,4 +1,4 @@
-
+import "./VideosList.scss"
 import NextVideo from "../NextVideo/NextVideo";
 
 
@@ -6,6 +6,7 @@ function VideosList(props){
 return (
 
 <div>
+    <h3 className="next-videos__title">Next Videos</h3>
     {props.videosList
     .filter((video) => video.id !== props.selectedVideo.id)
     .map((video) => (

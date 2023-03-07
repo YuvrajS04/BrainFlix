@@ -1,9 +1,20 @@
+@use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
 .video{
     &__title{
         font-weight: 500;
         margin: 1rem 1rem;
+            @include tablet{
+                font-weight: 700;
+                font-size: 2.063rem;
+            }
+    }
+    &__info{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+        }
     }
     &__analytics{
         margin: 0rem 1rem;
@@ -12,30 +23,52 @@
         display: flex;
         flex-direction: row;
         padding: 1rem 0rem;
+            @include tablet{
+                justify-content: space-between;
+                border-top: none;
+                padding: 0rem 0rem 1rem 0rem;
+            }
     }
-    &__name{
+    &__name-text{
         font-size: 1rem;
         font-weight: 500;
         font-size: 0.8rem;
         margin-bottom: 1rem;
+            @include tablet {
+                margin: 0rem;
+                font-size: 0.875rem;
+            }
     }
-    &__date{
+    &__date-text{
         font-size: 0.8rem;
         color: $primaryLight;
+        @include tablet{
+            font-size: 0.875rem;
+        }
     }
     &__stats{
         display: flex;
         flex-direction: column;
         margin-left: 5rem;
+            @include tablet{
+                flex-direction: row;
+            }
     }
     &__views{
         margin-bottom: 1rem;
+            @include tablet{
+                margin-bottom: 0rem;
+                font-size: 0.875rem;
+            }
 
         &-icon{
             margin-right: 0.5rem;
         }
     }
     &__likes {
+        @include tablet{
+            font-size: 0.875rem;
+        }
         &-icon{
             margin-right: 0.5rem; 
         }

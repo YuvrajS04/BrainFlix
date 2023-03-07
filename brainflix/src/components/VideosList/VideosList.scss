@@ -2,7 +2,10 @@
 
 .next-videos__title{
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
     margin-left: 1rem;
     color: $primaryLight;
+    border-top: 0.063rem solid $secondaryLight;
+    padding-top: 1rem;
 }

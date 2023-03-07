@@ -1,6 +1,9 @@
+@import "../../styles/partials/variables";
 
 
 video {
     width: 100vw;
     aspect-ratio: 16/9;
+    background-color: $secondary;
+
 }

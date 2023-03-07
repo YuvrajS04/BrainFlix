@@ -8,8 +8,12 @@ function NextVideo(props){
         <img className="next-video__img" src={props.video.image} />
     </div>
     <div className="next-video__wrapper-right">
-        <p className="next-video__title">{props.video.title}</p>
-        <p className="next-video__channel">{props.video.channel}</p>
+        <div className="next-video__title">
+            <p className="next-video__title-text">{props.video.title}</p>
+        </div>
+        <div className="next-video__channel">
+            <p className="next-video__channel-text">{props.video.channel}</p>
+        </div>
     </div>
     </div>
     </div>

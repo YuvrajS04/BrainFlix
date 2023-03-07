@@ -8,8 +8,12 @@ function VideoDetails(props) {
       <h1 className="video__title">{props.selectedVideo.title}</h1>
       <div className="video__analytics">
         <div className="video__info">
-          <h2 className="video__name">By {props.selectedVideo.channel}</h2>
-          <p className="video__date">{new Date(props.selectedVideo.timestamp).toLocaleDateString()}</p>
+          <div className="video__name">
+            <h2 className="video__name-text">By {props.selectedVideo.channel}</h2>
+          </div>
+          <div className="video__date" >
+            <p className="video__date-text">{new Date(props.selectedVideo.timestamp).toLocaleDateString()}</p>
+          </div>
         </div>
         <div className="video__stats">
           <div className="video__views">

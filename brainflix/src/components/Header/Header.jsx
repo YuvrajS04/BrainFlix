@@ -1,14 +1,15 @@
 import "./Header.scss";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
+import {NavLink} from "react-router-dom"
 
 function Header() {
   return (
     <header className="header">
       <div className="header__logo-wrapper">
-      <a href="#">
+      <NavLink to="/">
         <img className="header__logo" src={logo}></img>
-      </a>
+      </NavLink>
       </div>
       <div className="header__container">
         <input placeholder="Search" className="header__container-input"></input>
@@ -17,9 +18,9 @@ function Header() {
           alt="avatar image"
           className="header__container-avatar"
         ></img>
-        <a href="#" className="header__container-button">
+        <NavLink to="/UploadPage" className="header__container-button">
           UPLOAD
-        </a>
+        </NavLink>
       </div>
     </header>
   );

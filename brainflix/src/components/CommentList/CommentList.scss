@@ -20,7 +20,7 @@ ul{
         color: $primaryLight;
     }
     &__textarea{
-        border: 0.063rem solid $primaryLight;
+        border: 0.063rem solid $secondaryLight;
         background-color: $secondaryLighter;
         border-radius: 0.25rem;
         width: 100%;
@@ -32,8 +32,7 @@ ul{
     }
   &__avatar {
     border-radius: 50%;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
     height: 2.25rem;
     width: 2.25rem;
     flex: 0;

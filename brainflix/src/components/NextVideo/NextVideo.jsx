@@ -1,24 +1,24 @@
-import "./NextVideo.scss"
+import "./NextVideo.scss";
 
-function NextVideo(props){
-    return (
-    <div className="next-video">
-    <div className="next-video__wrapper" onClick={()=>{props.handleVideoClick(props.video.id)}}>
-    <div className="next-video__wrapper-left">
-        <img className="next-video__img" src={props.video.image} />
-    </div>
-    <div className="next-video__wrapper-right">
+function NextVideo({ image, title, channel }) {
+  console.log(channel);
+  console.log(title);
+  console.log(image);
+
+  return (
+    <div className="next-video__wrapper">
+      <div className="next-video__wrapper-left">
+        <img className="next-video__img" src={image} />
+      </div>
+      <div className="next-video__wrapper-right">
         <div className="next-video__title">
-            <p className="next-video__title-text">{props.video.title}</p>
+          <p className="next-video__title-text">{title}</p>
         </div>
         <div className="next-video__channel">
-            <p className="next-video__channel-text">{props.video.channel}</p>
+          <p className="next-video__channel-text">{channel}</p>
         </div>
+      </div>
     </div>
-    </div>
-    </div>
-
-
-);
+  );
 }
 export default NextVideo;

@@ -15,7 +15,7 @@ import VideosList from "../components/VideosList/VideosList";
 
 function HomePage() {
   const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
-  const [VideoList] = useState(nextVideosList);
+  
   
   const handleVideoClick = (id) => {
     const findVideo = videoDetails.find((video) => video.id === id)
@@ -27,7 +27,7 @@ function HomePage() {
     <Video selectedVideo={selectedVideo} />
     <VideoDetails selectedVideo={selectedVideo} />
     <Comments selectedVideo={selectedVideo} />
-    <VideosList videosList={VideoList} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
+    <VideosList selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
     </div>
   );
   }

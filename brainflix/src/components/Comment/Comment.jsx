@@ -1,9 +1,10 @@
 import "./Comment.scss"
 
-function Comment(props) {
+function Comment({selectedVideo}) {
+  console.log(selectedVideo);
   return (
     <>
-      {props.selectedVideo.comments.map((comment) => {
+      {selectedVideo.comments.map((comment) => {
         return (
           <li key={comment.id} className="comments__list-item">
             <div className="comments__wrapper">

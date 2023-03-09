@@ -2,6 +2,11 @@
 @import "../../styles/partials/variables";
 
 
+a, a:visited{
+    text-decoration: none;
+    color: $primary;
+}
+
 .next-video{
 
 &__img{

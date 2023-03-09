@@ -1,9 +1,6 @@
 import "./NextVideo.scss";
 
 function NextVideo({ image, title, channel }) {
-  console.log(channel);
-  console.log(title);
-  console.log(image);
 
   return (
     <div className="next-video__wrapper">

@@ -1,15 +1,15 @@
 import "./Header.scss";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__logo-wrapper">
-      <NavLink to="/">
-        <img className="header__logo" src={logo}></img>
-      </NavLink>
+        <NavLink to="/">
+          <img className="header__logo" src={logo}/>
+        </NavLink>
       </div>
       <div className="header__container">
         <input placeholder="Search" className="header__container-input"></input>

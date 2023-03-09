@@ -12,9 +12,10 @@ function CommentList({ selectedVideo }) {
             <img src={avatar} alt="avatar image" className="form__avatar" />
           </div>
           <div className="form__wrapper-right">
-            <div>
-              <h3 className="form__title">JOIN THE CONVERSATION</h3>
+            <div className="form__wrapper-input">
+              <label htmlFor="textarea" className="form__title">JOIN THE CONVERSATION</label>
               <textarea
+                id="textarea"
                 placeholder="Add a comment"
                 className="form__textarea"
               ></textarea>

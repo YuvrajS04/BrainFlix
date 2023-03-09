@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useState } from "react";
+// import { useState } from "react";
 import {BrowserRouter, Routes, Route } from "react-router-dom"
 
 
@@ -7,7 +7,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Header from "./components/Header/Header";
 import HomePage from "./Pages/HomePage";
-import NextVideo from "./components/NextVideo/NextVideo";
+// import NextVideo from "./components/NextVideo/NextVideo";
 
 
 

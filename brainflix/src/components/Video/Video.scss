@@ -1,9 +1,23 @@
+@use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
 
-video {
+.video {
     width: 100vw;
     aspect-ratio: 16/9;
-    background-color: $secondary;
+    @include tablet{
+        width: 90vw;
+
+    }
+
+    &__wrapper{
+        display: flex;
+        @include tablet{
+            background-color: $secondary;
+            justify-content: center;
+            display: flex;           
+        }
+
+    }
 
 }

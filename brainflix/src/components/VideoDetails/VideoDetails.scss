@@ -28,6 +28,7 @@
                 justify-content: space-between;
                 border-top: none;
                 padding: 0rem 0rem 1rem 0rem;
+                margin: 0rem 2rem;
             }
     }
     &__name-text{
@@ -36,7 +37,7 @@
         font-size: 0.8rem;
         margin-bottom: 1rem;
             @include tablet {
-                margin: 0rem;
+                margin: 0rem 2rem 0rem 0rem;
                 font-size: 0.875rem;
             }
     }
@@ -60,6 +61,7 @@
             @include tablet{
                 margin-bottom: 0rem;
                 font-size: 0.875rem;
+                margin-right: 2rem;
             }
 
         &-icon{
@@ -85,5 +87,8 @@
         margin: 1rem 1rem;
         color: $primary;
         line-height: 1.125rem;
+        @include tablet{
+            margin: 1rem 2rem;
+        }
     }
 }

@@ -1,3 +1,4 @@
+@use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
 ul{
@@ -5,6 +6,9 @@ ul{
 }
 .comments-section{
     margin: 0rem 1rem;
+      @include tablet{
+        margin: 0rem 2rem;
+      }
     &-number{
         font-size: 0.813rem;
         font-weight: 400;
@@ -26,6 +30,11 @@ ul{
         width: 100%;
         height: 6rem;
         padding: 0.75rem;
+        @include tablet{
+          max-height: 2.5rem;
+          resize: none;
+          padding: 0.6rem 0 0 1rem;
+        }
     }
     &__textarea::placeholder{
         color: $primary;
@@ -58,13 +67,28 @@ ul{
     width: 100%;
     height: 2.5rem;
     font-size: 0.75rem;
+    @include tablet{
+      min-width: 10rem;
+      margin-bottom: 0rem;
+      margin-top: 1.2rem;
+    }
   }
   &__wrapper{
     display: flex;
     flex-direction: row;
 
+    &-input{
+      @include tablet{
+      width: 80%;
+      }
+    }
+
     &-right{
         width: 100%;
+        @include tablet{
+          display: flex;
+          gap: 1.5rem;
+        }
     }
   }
 }

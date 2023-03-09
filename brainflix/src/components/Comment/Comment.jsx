@@ -1,7 +1,6 @@
 import "./Comment.scss"
 
 function Comment({selectedVideo}) {
-  console.log(selectedVideo);
   return (
     <>
       {selectedVideo.comments.map((comment) => {
@@ -13,7 +12,7 @@ function Comment({selectedVideo}) {
                 <div className="comments__wrapper-top">
                   <p className="comments__name">{comment.name}</p>
                   <p className="comments__date">
-                    {new Date(comment.timestamp).toLocaleDateString()}
+                    {new Date(comment.timestamp).toLocaleDateString("en-US", {year:"numeric", month:"2-digit", day:"2-digit"})}
                   </p>
                 </div>
                 <p className="comments__text">{comment.comment}</p>

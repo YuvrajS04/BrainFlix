@@ -12,7 +12,6 @@ import { useEffect, useState } from "react";
 function HomePage() {
   const [VideoList, setVideoList] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState({
-    // id: "",
   });
   const { videoId } = useParams();
 
@@ -27,17 +26,14 @@ function HomePage() {
     if (videoId) {
       getVideo(videoId);
     } else if (VideoList.length) {
-      console.log("videoList[o]: ", VideoList[0]);
       getVideo(VideoList[0]?.id);
     }
   }, [videoId, VideoList]);
 
   function getVideos() {
-    console.log("getting videos");
     axios
       .get(`${api}/videos?api_key=${apiKey}`)
       .then((res) => {
-        console.log("res: ", res.data);
         setVideoList(res.data);
       })
       .catch((err) => {
@@ -46,7 +42,6 @@ function HomePage() {
   }
 
   function getVideo(videoId) {
-    console.log("getting video ONE");
 
     axios
       .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
@@ -54,7 +49,7 @@ function HomePage() {
         setSelectedVideo(response.data);
       })
       .catch((err) => {
-        console.log("error");
+        console.log("error", err);
       });
   }
 

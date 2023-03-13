@@ -2,6 +2,7 @@ import image from "../../assets/Images/Upload-video-preview.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import "./UploadPage.scss";
 
+// creates an alert if description or videoTitle field is missing info otherwise submit and go back to homepage
 function UploadPage() {
   const navigate = useNavigate();
   const handlePublish = (event) => {
@@ -20,7 +21,7 @@ function UploadPage() {
 
   return (
     <article className="Upload">
-      <h1 className="Upload__title">Upload Page</h1>
+      <h1 className="Upload__title">Upload Video</h1>
       <form className="Upload__form" onSubmit={handlePublish}>
         <div className="Upload__wrapper">
           <div className="thumbnail">

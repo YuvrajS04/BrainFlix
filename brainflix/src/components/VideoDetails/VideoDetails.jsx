@@ -1,6 +1,6 @@
-import "./VideoDetails.scss"
-import likeslogo from "../../assets/Icons/likes.svg"
-import viewslogo from "../../assets/Icons/views.svg"
+import "./VideoDetails.scss";
+import likeslogo from "../../assets/Icons/likes.svg";
+import viewslogo from "../../assets/Icons/views.svg";
 
 function VideoDetails(props) {
   return (
@@ -9,15 +9,19 @@ function VideoDetails(props) {
       <div className="video__analytics">
         <div className="video__info">
           <div className="video__name">
-            <h2 className="video__name-text">By {props.selectedVideo.channel}</h2>
+            <h2 className="video__name-text">
+              By {props.selectedVideo.channel}
+            </h2>
           </div>
-          <div className="video__date" >
-            <p className="video__date-text">{new Date(props.selectedVideo.timestamp).toLocaleDateString()}</p>
+          <div className="video__date">
+            <p className="video__date-text">
+              {new Date(props.selectedVideo.timestamp).toLocaleDateString()}
+            </p>
           </div>
         </div>
         <div className="video__stats">
           <div className="video__views">
-          <img className="video__views-icon" src={viewslogo} />
+            <img className="video__views-icon" src={viewslogo} />
             <p className="video__views-text">{props.selectedVideo.views}</p>
           </div>
           <div className="video__likes">

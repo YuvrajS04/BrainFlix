@@ -20,6 +20,9 @@
       align-items: center;
       padding-left: 2rem;
     }
+    @include desktop {
+      padding-left: 6rem;
+    }
   }
 
   &__container {
@@ -30,6 +33,10 @@
       align-items: center;
       flex-wrap: nowrap;
       justify-content: flex-end;
+      padding-right: 1.5rem;
+    }
+    @include desktop {
+      padding-right: 6rem;
     }
 
     &-avatar {
@@ -96,7 +103,7 @@
         max-width: 10rem;
       }
     }
-    &-button:hover{
+    &-button:hover {
       background-color: $secondaryAlt;
     }
   }

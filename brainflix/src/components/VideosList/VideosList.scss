@@ -1,11 +1,27 @@
+@use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
-.next-videos__title{
-    font-weight: 400;
-    font-size: 0.75rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    color: $primaryLight;
-    border-top: 0.063rem solid $secondaryLight;
-    padding-top: 1rem;
+.next-video {
+  @include tablet {
+    padding-left: 1rem;
+  }
+  @include desktop {
+    border-left: 0.063rem solid $secondaryLight;
+  }
+}
+.next-videos__title {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  color: $primaryLight;
+  border-top: 0.063rem solid $secondaryLight;
+  padding-top: 1rem;
+  @include tablet {
+    margin-left: 2rem;
+    border-top: 0;
+  }
+  @include desktop {
+    padding-top: 2rem;
+  }
 }

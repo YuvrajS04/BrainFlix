@@ -11,16 +11,17 @@ import { useEffect, useState } from "react";
 
 function HomePage() {
   const [VideoList, setVideoList] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState({
-  });
+  const [selectedVideo, setSelectedVideo] = useState({});
   const { videoId } = useParams();
 
   const api = "https://project-2-api.herokuapp.com";
   const apiKey = "f3ef71cd-9786-4b6f-b650-462fa70aa880";
 
+  // useEffect only executed once on first mount
   useEffect(() => {
     getVideos();
   }, []);
+
 
   useEffect(() => {
     if (videoId) {
@@ -32,6 +33,7 @@ function HomePage() {
 
   function getVideos() {
     axios
+      // gets videolist info from api
       .get(`${api}/videos?api_key=${apiKey}`)
       .then((res) => {
         setVideoList(res.data);
@@ -42,8 +44,8 @@ function HomePage() {
   }
 
   function getVideo(videoId) {
-
     axios
+    // gets video info from api 
       .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
       .then((response) => {
         setSelectedVideo(response.data);
@@ -58,18 +60,26 @@ function HomePage() {
       {VideoList && selectedVideo.comments && (
         <Video selectedVideo={selectedVideo} />
       )}
-      {VideoList && selectedVideo.comments && (
-        <VideoDetails selectedVideo={selectedVideo} />
-      )}
-      {VideoList && selectedVideo.comments && (
-        <Comments selectedVideo={selectedVideo} />
-      )}
-      {VideoList && selectedVideo.comments && (
-        <VideosList
-          selectedVideo={selectedVideo}
-          VideoList={VideoList.filter((video) => video.id !== selectedVideo.id)}
-        />
-      )}
+      <div className="desktop__layout">
+        <div className="desktop__layout1">
+          {VideoList && selectedVideo.comments && (
+            <VideoDetails selectedVideo={selectedVideo} />
+          )}
+          {VideoList && selectedVideo.comments && (
+            <Comments selectedVideo={selectedVideo} />
+          )}
+        </div>
+        <div className="desktop__layout2">
+          {VideoList && selectedVideo.comments && (
+            <VideosList
+              selectedVideo={selectedVideo}
+              VideoList={VideoList.filter(
+                (video) => video.id !== selectedVideo.id
+              )}
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 }

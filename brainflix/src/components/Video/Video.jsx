@@ -1,6 +1,5 @@
 import "./Video.scss";
 
-
 function Video(props) {
   return (
     <div className="video__wrapper">

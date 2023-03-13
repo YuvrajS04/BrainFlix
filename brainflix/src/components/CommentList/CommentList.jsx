@@ -13,7 +13,9 @@ function CommentList({ selectedVideo }) {
           </div>
           <div className="form__wrapper-right">
             <div className="form__wrapper-input">
-              <label htmlFor="textarea" className="form__title">JOIN THE CONVERSATION</label>
+              <label htmlFor="textarea" className="form__title">
+                JOIN THE CONVERSATION
+              </label>
               <textarea
                 id="textarea"
                 placeholder="Add a comment"

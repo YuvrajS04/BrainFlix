@@ -1,14 +1,43 @@
 @use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
-
 .Upload {
   padding: 1rem;
   border-top: 0.063rem solid $secondaryLight;
+  @include tablet {
+    padding: 2rem;
+  }
+  @include desktop {
+    padding: 2rem 6rem 25rem 6rem;
+  }
+
+  &__wrapper {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 0.063rem solid $secondaryLight;
+    }
+  }
+
+  &__video {
+    @include tablet {
+      padding-bottom: 1rem;
+      border-bottom: 0.063rem solid $secondaryLight;
+    }
+    @include desktop {
+      width: 90%;
+      border-bottom: 0;
+      padding-left: 2rem;
+    }
+  }
   &__title {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include tablet {
+      font-size: 2.063rem;
+      border-bottom: 0.063rem solid $secondaryLight;
+    }
   }
 
   &__video-label {
@@ -17,6 +46,9 @@
     font-size: 0.72rem;
     color: $primaryLight;
     margin: 0.7rem 0 0 0;
+    @include desktop {
+      margin: 1.5rem 0 0 0;
+    }
   }
   &__video-input {
     width: 100%;
@@ -27,7 +59,8 @@
     height: 2.5rem;
     margin-top: 0.3rem;
   }
-  &__video-input::placeholder, &__description-input::placeholder {
+  &__video-input::placeholder,
+  &__description-input::placeholder {
     color: $primary;
   }
   &__description-input {
@@ -38,19 +71,43 @@
     border-radius: 0.25rem;
     padding: 0.75rem;
     margin-top: 0.3rem;
+    @include tablet {
+      border-bottom: 0.063rem solid $secondaryLight;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      display: flex;
+      padding-top: 1rem;
+      justify-content: flex-end;
+    }
   }
 }
 
 .thumbnail {
+  @include desktop {
+    max-width: 20rem;
+  }
   &__title {
     font-size: 0.72rem;
     text-transform: uppercase;
     color: $primaryLight;
+    @include tablet {
+      padding-top: 1.5rem;
+    }
   }
   &__image {
     width: 100%;
     border-radius: 0.25rem;
     margin: 0.5rem 0 0.3rem 0;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 100%;
+      margin-top: 0.3rem;
+    }
   }
 }
 
@@ -77,12 +134,16 @@
     color: $primaryLighter;
     margin: 1rem 0;
     font-size: 0.75rem;
+    @include tablet {
+      order: 2;
+      margin: 0;
+      max-width: 10rem;
+    }
   }
-  &__publish:hover{
+  &__publish:hover {
     background-color: $secondaryAlt;
-
   }
-    &__cancel{
+  &__cancel {
     width: 100%;
     height: 2.5rem;
     text-transform: uppercase;
@@ -92,7 +153,10 @@
     color: $primaryAlt;
     margin: 0 0 1rem 0;
     font-size: 0.75rem;
-    
+    @include tablet {
+      order: 1;
+      max-width: 10rem;
+      margin-right: 2rem;
+    }
   }
 }
-

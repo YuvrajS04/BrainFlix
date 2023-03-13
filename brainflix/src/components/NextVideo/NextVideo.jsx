@@ -1,7 +1,6 @@
 import "./NextVideo.scss";
 
 function NextVideo({ image, title, channel }) {
-
   return (
     <div className="next-video__wrapper">
       <div className="next-video__wrapper-left">

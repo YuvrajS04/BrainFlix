@@ -1,94 +1,107 @@
 @use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
-.video{
-    &__title{
-        font-weight: 500;
-        margin: 1rem 1rem;
-            @include tablet{
-                font-weight: 700;
-                font-size: 2.063rem;
-                margin: 1rem 2rem;
-            }
+.video {
+  &__title {
+    font-weight: 500;
+    margin: 1rem 1rem;
+    @include tablet {
+      font-weight: 700;
+      font-size: 2.063rem;
+      margin: 2rem 0 2rem 2rem;
     }
-    &__info{
-        @include tablet{
-            display: flex;
-            flex-direction: row;
-        }
+    @include desktop {
+      margin: 2rem 1rem;
     }
-    &__analytics{
-        margin: 0rem 1rem;
-        border-top: 0.063rem solid $secondaryLight;
-        border-bottom: 0.063rem solid $secondaryLight;
-        display: flex;
-        flex-direction: row;
-        padding: 1rem 0rem;
-            @include tablet{
-                justify-content: space-between;
-                border-top: none;
-                padding: 0rem 0rem 1rem 0rem;
-                margin: 0rem 2rem;
-            }
+  }
+  &__info {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
     }
-    &__name-text{
-        font-size: 1rem;
-        font-weight: 500;
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
-            @include tablet {
-                margin: 0rem 2rem 0rem 0rem;
-                font-size: 0.875rem;
-            }
+  }
+  &__analytics {
+    margin: 0rem 1rem;
+    border-top: 0.063rem solid $secondaryLight;
+    border-bottom: 0.063rem solid $secondaryLight;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0rem;
+    @include tablet {
+      justify-content: space-between;
+      border-top: none;
+      padding: 0rem 0rem 1rem 0rem;
+      margin: 0rem 2rem;
     }
-    &__date-text{
-        font-size: 0.8rem;
-        color: $primaryLight;
-        @include tablet{
-            font-size: 0.875rem;
-        }
+    @include desktop {
+      padding: 0 2rem 1rem 0;
+      margin: 0 0 1rem 1rem;
     }
-    &__stats{
-        display: flex;
-        flex-direction: column;
-        margin-left: 5rem;
-            @include tablet{
-                flex-direction: row;
-            }
+  }
+  &__name-text {
+    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    @include tablet {
+      margin: 0rem 2rem 0rem 0rem;
+      font-size: 0.875rem;
     }
-    &__views{
-        margin-bottom: 1rem;
-            @include tablet{
-                margin-bottom: 0rem;
-                font-size: 0.875rem;
-                margin-right: 2rem;
-            }
+  }
+  &__date-text {
+    font-size: 0.8rem;
+    color: $primaryLight;
+    @include tablet {
+      font-size: 0.875rem;
+    }
+  }
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__views {
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 0rem;
+      font-size: 0.875rem;
+      margin-right: 2rem;
+    }
 
-        &-icon{
-            margin-right: 0.5rem;
-        }
+    &-icon {
+      margin-right: 0.5rem;
     }
-    &__likes {
-        @include tablet{
-            font-size: 0.875rem;
-        }
-        &-icon{
-            margin-right: 0.5rem; 
-        }
+  }
+  &__likes {
+    @include tablet {
+      font-size: 0.875rem;
     }
-    &__views, &__likes {
-        display: flex;
-        flex-direction: row;
-        color: $primaryLight;
-        font-size: 0.8rem;
+    &-icon {
+      margin-right: 0.5rem;
     }
-    &__text{
-        font-size: 0.813rem;
-        margin: 1rem 1rem;
-        color: $primary;
-        line-height: 1.125rem;
-        @include tablet{
-            margin: 1.5rem 2rem;
-        }
+  }
+  &__views,
+  &__likes {
+    display: flex;
+    flex-direction: row;
+    color: $primaryLight;
+    font-size: 0.8rem;
+  }
+  &__text {
+    font-size: 0.813rem;
+    margin: 1rem 1rem;
+    color: $primary;
+    line-height: 1.125rem;
+    @include tablet {
+      font-size: 0.875;
+      margin: 1.5rem 2rem;
+      line-height: 1.375rem;
     }
+    @include desktop {
+      margin-left: 1rem;
+    }
+  }
 }

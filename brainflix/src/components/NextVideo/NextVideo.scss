@@ -1,43 +1,43 @@
 @use "../../styles/partials/mixins" as *;
 @import "../../styles/partials/variables";
 
-
-
-.next-video{
-
-&__img{
+.next-video {
+  &__img {
     width: 100%;
     height: 3.5rem;
     border-radius: 0.25rem;
     min-width: 6rem;
     object-fit: cover;
-}
+    @include tablet {
+      height: 4rem;
+      min-width: 6.5rem;
+    }
+  }
 
-&__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: row;
     height: 3.5rem;
     margin-bottom: 0.75rem;
-        @include tablet {
-            max-width: 20rem;
-        }
-
-    &-left{
-        margin-left: 1rem;
-        margin-bottom: 1rem;
-        margin-right: 1rem;
+    @include tablet {
+      max-width: 20rem;
+      margin-bottom: 1.5rem;
+      height: 4rem;
     }
 
-    &-right{
-        font-size: 0.813rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        color: $primary;
-        text-decoration: none;
+    &-left {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
     }
 
-
-}
-
+    &-right {
+      font-size: 0.813rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
 }

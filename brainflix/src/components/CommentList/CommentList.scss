@@ -9,6 +9,11 @@ ul {
   @include tablet {
     margin: 0rem 2rem;
   }
+  @include desktop {
+    margin: 0%;
+    margin: 0rem;
+    margin-left: 1rem;
+  }
   &-number {
     font-size: 0.813rem;
     font-weight: 400;
@@ -73,9 +78,15 @@ ul {
       margin-top: 1.2rem;
     }
   }
+  &__button:hover {
+    background-color: $secondaryAlt;
+  }
   &__wrapper {
     display: flex;
     flex-direction: row;
+    @include tablet {
+      border-bottom: 0.063rem solid $secondaryLight;
+    }
 
     &-input {
       @include tablet {
@@ -89,6 +100,9 @@ ul {
         display: flex;
         gap: 1.5rem;
         margin-bottom: 1.5rem;
+      }
+      @include desktop {
+        margin-right: 2rem;
       }
     }
   }

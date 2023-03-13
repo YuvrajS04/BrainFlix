@@ -1,7 +1,6 @@
-@use 'styles/partials/variables' as *;
-@use 'styles/partials/mixins' as *;
+@use "styles/partials/variables" as *;
+@use "styles/partials/mixins" as *;
 @import "styles/partials/font";
-
 
 * {
   font-family: "avenir";
@@ -13,45 +12,17 @@
 li {
   list-style-type: none;
 }
-// .header {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   align-content: center;
 
-//   &__container {
-//     display: flex;
-//     flex-wrap: wrap;
-//     width: 100%;
-
-
-//   &-avatar {
-//     background: url("./assets/Images/Mohan-muruge.jpg");
-//     border-radius: 50%;
-//     background-position: center;
-//     background-size: cover;
-//     height: 2.25rem;
-//     width: 2.25rem;
-//     flex: 0;
-//     order: 2;
-//     margin-left: 1rem;
-//     }
-
-//     &-input {
-//       flex: 1;
-//       width: 100%;
-//       order: 1;
-//     }
-
-//   &-button {
-//     width: 100%;
-//     order: 3;
-//   }
-// }
-// }
-// img {
-//   height: 100px;
-//   width: 100px;
-// }
-
-
+.desktop__layout {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  &1 {
+    @include desktop {
+      width: 80%;
+    }
+  }
+}

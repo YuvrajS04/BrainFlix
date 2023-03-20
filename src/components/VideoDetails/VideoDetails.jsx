@@ -15,7 +15,11 @@ function VideoDetails(props) {
           </div>
           <div className="video__date">
             <p className="video__date-text">
-              {new Date(props.selectedVideo.timestamp).toLocaleDateString()}
+              {new Date(props.selectedVideo.timestamp).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "2-digit",
+                    })}
             </p>
           </div>
         </div>

@@ -5,7 +5,7 @@ import avatar from "../../assets/Images/Mohan-muruge.jpg";
 function CommentList({ selectedVideo }) {
   return (
     <section className="comments-section">
-      <h2 className="comments-section-number">3 Comments</h2>
+      <h2 className="comments-section-number">{Comment.length} comments</h2>
       <form className="form">
         <div className="form__wrapper">
           <div className="form__wrapper-left">

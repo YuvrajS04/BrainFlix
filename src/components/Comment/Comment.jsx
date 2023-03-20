@@ -20,6 +20,7 @@ function Comment({ selectedVideo }) {
                     })}
                   </p>
                 </div>
+
                 <p className="comments__text">{comment.comment}</p>
               </div>
             </div>

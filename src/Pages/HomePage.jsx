@@ -14,8 +14,7 @@ function HomePage() {
   const [selectedVideo, setSelectedVideo] = useState({});
   const { videoId } = useParams();
 
-  const api = "https://project-2-api.herokuapp.com";
-  const apiKey = "f3ef71cd-9786-4b6f-b650-462fa70aa880";
+  const api = "http://localhost:8082";
 
   // useEffect only executed once on first mount
   useEffect(() => {
@@ -26,6 +25,7 @@ function HomePage() {
   useEffect(() => {
     if (videoId) {
       getVideo(videoId);
+
     } else if (VideoList.length) {
       getVideo(VideoList[0]?.id);
     }
@@ -34,8 +34,9 @@ function HomePage() {
   function getVideos() {
     axios
       // gets videolist info from api
-      .get(`${api}/videos?api_key=${apiKey}`)
+      .get(`${api}/videos`)
       .then((res) => {
+        // console.log(res.data)
         setVideoList(res.data);
       })
       .catch((err) => {
@@ -46,8 +47,9 @@ function HomePage() {
   function getVideo(videoId) {
     axios
     // gets video info from api 
-      .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+      .get(`${api}/videos/${videoId}`)
       .then((response) => {
+        console.log(response.data);
         setSelectedVideo(response.data);
       })
       .catch((err) => {

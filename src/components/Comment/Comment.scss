@@ -23,6 +23,9 @@
       font-size: 0.813rem;
     }
   }
+  &__name {
+    font-weight: 700;
+  }
   &__date {
     color: $primaryLight;
   }

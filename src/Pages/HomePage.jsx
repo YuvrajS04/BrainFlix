@@ -36,7 +36,6 @@ function HomePage() {
       // gets videolist info from api
       .get(`${api}/videos`)
       .then((res) => {
-        // console.log(res.data)
         setVideoList(res.data);
       })
       .catch((err) => {
@@ -49,7 +48,6 @@ function HomePage() {
     // gets video info from api 
       .get(`${api}/videos/${videoId}`)
       .then((response) => {
-        console.log(response.data);
         setSelectedVideo(response.data);
       })
       .catch((err) => {

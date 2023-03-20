@@ -12,19 +12,19 @@ function UploadPage() {
   const api = "http://localhost:8082";
   const handlePublish = (event) => {
     event.preventDefault();
-    // const form = event.target;
-    // const videoTitle = form.title.target;
-    // const description = form.description.target;
 
     const { title, description } = formRef.current;
-    // console.log(formRef.current.title.value, formRef.current.description.value )
 
     const newVideo = {
       title: title.value,
       description: description.value,
     };
 
-    if (description.value === " " || title.value === " ") {
+    const handleCancel = () => {
+      navigate("/")
+    }
+
+    if (description.value === "" || title.value === "") {
       alert("Please add a video title and description");
     } else {
       postVideos(newVideo);
@@ -34,12 +34,15 @@ function UploadPage() {
     event.target.reset();
   };
 
+  const handleCancel = () => {
+    navigate("/")
+  }
+
   function postVideos(formData) {
     axios
 
       .post(`${api}/videos`, formData)
       .then((_res) => {
-        console.log("your request was received");
       })
       .catch((err) => {
         console.log("error:", err);
@@ -80,7 +83,7 @@ function UploadPage() {
         </div>
         <div className="Upload__button">
           <button className="button__publish">publish</button>
-          <button className="button__cancel">Cancel</button>
+          <button className="button__cancel" onClick={handleCancel} >Cancel</button>
         </div>
       </form>
     </article>

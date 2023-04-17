@@ -20,10 +20,6 @@ function UploadPage() {
       description: description.value,
     };
 
-    const handleCancel = () => {
-      navigate("/")
-    }
-
     if (description.value === "" || title.value === "") {
       alert("Please add a video title and description");
     } else {

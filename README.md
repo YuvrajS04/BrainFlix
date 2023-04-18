@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# BrainFlix Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+BrainFlix is a full stack web application for video sharing and streaming. This repository contains the frontend code for the BrainFlix application. It is built using modern web technologies such as React and Axios for handling API requests.
 
-In the project directory, you can run:
+https://user-images.githubusercontent.com/123492654/232643280-4c779354-fcb8-47e5-a3ea-32498a6eee16.mov
+## Features
 
-### `npm start`
+- Upload videos with video title and description
+- Watch videos with video details and comments
+- Browse related videos
+- Responsive design for desktop, tablet and mobile devices
+<img width="484" alt="Screenshot 2023-04-17 at 5 55 36 PM" src="https://user-images.githubusercontent.com/123492654/232641563-b3aeb504-6f8a-4b46-8b02-2a3e8cfda3c7.png">
+<img width="712" alt="Screenshot 2023-04-17 at 5 57 05 PM" src="https://user-images.githubusercontent.com/123492654/232641725-9dd2137b-a6d0-4991-a5d3-942cf3961cfc.png">
+- Utilizes React for frontend development
+- Utilizes Axios for API requests
+- Utilizes React Router for routing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- Axios
+- React Router
+- HTML
+- CSS
+- JavaScript
 
-### `npm test`
+## Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project includes the following components:
 
-### `npm run build`
+- `VideoList`: Renders a list of videos
+<img width="312" alt="Screenshot 2023-04-17 at 5 43 53 PM" src="https://user-images.githubusercontent.com/123492654/232640265-0ee75a39-22f0-4e54-9ee5-7ae7bd8d7ee4.png">
+- `VideoDetail`: Renders the details of a specific video, including comments
+<img width="939" alt="Screenshot 2023-04-17 at 5 45 18 PM" src="https://user-images.githubusercontent.com/123492654/232640363-044da527-0649-4827-b00b-533d5e91e31e.png">
+- `VideoForm`: Renders a form for uploading a new video
+<img width="1323" alt="Screenshot 2023-04-17 at 5 53 57 PM" src="https://user-images.githubusercontent.com/123492654/232641356-5c2cd328-02ad-4afe-b5b5-7f206bcf610a.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project on your local machine, please follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd <project-directory>`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your web browser and go to `http://localhost:3000` to access the application
 
-### `npm run eject`
+## API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses a RESTful API to fetch and post video data. The API is hosted locally at `http://localhost:8082`. The endpoints used in this project are:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `GET /videos`: Retrieves a list of videos
+- `GET /videos/:videoId`: Retrieves a specific video by videoId
+- `POST /videos`: Creates a new video with video title and description
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you'd like to contribute to this project, please follow these steps:
 
-## Learn More
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them: `git commit -m "Your commit message here"`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Create a pull request to the `main` branch of the original repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was developed as part of a web development course. Special thanks to the educators and TA's for their guidance and support.
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions or suggestions, please feel free to contact me at [yuvrajsirohi22@gmail.com](mailto:yuvrajsirohi22@gmail.com).
